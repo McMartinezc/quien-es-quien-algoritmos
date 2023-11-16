@@ -5,10 +5,12 @@
  * @param {array} people Array de personas
  * @param {string} gender Puede ser "male" | "female"
  *
- * @returns {array} Devuelve un array nuevo con las personas filtradas por el género del paráemtro gender
+ * @returns {array} Devuelve un array nuevo con las personas filtradas por el género del parámetro gender
  */
 
-function filterByGender(people, gender) {}
+function filterByGender(people, gender) {
+  return people.filter((p)=> gender === p.gender);
+}
 
 const people = [
   {

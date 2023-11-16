@@ -9,7 +9,9 @@
  * @return {array} Devuelve un array con todas las personas MENOS aquella que tenía el idToRemove
  */
 
-function removePersonArray(people, idToRemove) {}
+function removePersonArray(people, idToRemove) {
+  return people.filter((p)=> p.id !== idToRemove);
+}
 
 const people = [
   {

@@ -1,8 +1,11 @@
 /**
- * Para nuestro juego de "Quien es Quien" necesitamos escoger un elemento de este array de personas al azar. ¿Cómo podriamos implementar una selección al azar entre todos los elemementos del array?
+ * Para nuestro juego de "Quien es Quien" necesitamos escoger un elemento de este array de personas al azar. ¿Cómo podriamos implementar una selección al azar entre todos los elementos del array?
  */
 
-function getRandomItemArray() {}
+function getRandomItemArray(people) {
+  const indexRandom = Math.floor(Math.random() * people.length);
+  return people[indexRandom];
+}
 
 const people = [
     {
