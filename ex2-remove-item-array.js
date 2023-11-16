@@ -13,6 +13,11 @@ function removePersonArray(people, idToRemove) {
   return people.filter((p)=> p.id !== idToRemove);
 }
 
+//Si queremos eliminar varios ids idsToRemove es un array de ids a no incluir en el array filtrado y nos de el nombre de los filtrados
+function removePersonsArray(people, idsToRemove){
+  return people.filter(p => !idsToRemove.includes(p.id)).map(p=>p.name.first);
+}
+
 const people = [
   {
     name: { title: "Mr", first: "Karl", last: "Johnson" },
@@ -79,3 +84,4 @@ const people = [
 console.log(removePersonArray(people, "11122222")); // Devuelve el mismo array, menos sin el primer elemento, el señor Karl Jonshon
 console.log(removePersonArray(people, "458558716")); // Devuelve el mismo array, menos sin el señor Jedemiz Popovic (segundo elemento)
 console.log(removePersonArray(people, "3434234Y")); // Devuelve el mismo array, menos sin la señora "Radomira Manuylenko", último elemento del array
+console.log(removePersonsArray(people, ["3434234Y","458558716"])); 
